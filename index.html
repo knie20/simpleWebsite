@@ -14,7 +14,29 @@
 </head>
 
 <body>
-    <h1>woah</h1>
-    <script src="scripts.js"></script>
+    <h1 id="text">woah</h1>
+    <p id="paragraph">
+      hello, this is my second year in the IT undergrad program. My development esperience is mainly focused around javascript. I have worked with nodejs and Angular for projects and jobs.
+      <br/>
+      my favorite games include: Smash 4, Civilization VI(really excited for the new expansion), and Team Fortress 2.
+    </p>
+      <img src="selfie.jpg"/>
+    <script>
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      
+      function changeColor(){
+        var text = document.getElementById('text');
+          text.style.color = getRandomColor();
+      }
+
+      setInterval(changeColor, 50);
+    </script>
 </body>
 </html>
